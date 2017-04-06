@@ -1,0 +1,483 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/DamienP33/express-mongoose-generator#readme"
+
+    >express-mongoose-generator (v3.0.2)</a>
+</h1>
+<h4>It’s a mongoose model, REST controller and Express router code generator for Express.js 4 application</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-mongoose-generator">module express-mongoose-generator</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express-mongoose-generator.</span>fileTools</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express-mongoose-generator.</span>formatTools</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express-mongoose-generator.</span>generators</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-mongoose-generator.fileTools">module express-mongoose-generator.fileTools</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-mongoose-generator.fileTools.createDirIfIsNotDefined">
+            function <span class="apidocSignatureSpan">express-mongoose-generator.fileTools.</span>createDirIfIsNotDefined
+            <span class="apidocSignatureSpan">(dirPath, dirName, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-mongoose-generator.fileTools.loadTemplateSync">
+            function <span class="apidocSignatureSpan">express-mongoose-generator.fileTools.</span>loadTemplateSync
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-mongoose-generator.fileTools.writeFile">
+            function <span class="apidocSignatureSpan">express-mongoose-generator.fileTools.</span>writeFile
+            <span class="apidocSignatureSpan">(path, contents, mode, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-mongoose-generator.formatTools">module express-mongoose-generator.formatTools</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-mongoose-generator.formatTools.getFieldsForModelTemplate">
+            function <span class="apidocSignatureSpan">express-mongoose-generator.formatTools.</span>getFieldsForModelTemplate
+            <span class="apidocSignatureSpan">(fields)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-mongoose-generator.formatTools.pluralize">
+            function <span class="apidocSignatureSpan">express-mongoose-generator.formatTools.</span>pluralize
+            <span class="apidocSignatureSpan">(word)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-mongoose-generator.generators">module express-mongoose-generator.generators</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-mongoose-generator.generators.generateController">
+            function <span class="apidocSignatureSpan">express-mongoose-generator.generators.</span>generateController
+            <span class="apidocSignatureSpan">(path, modelName, modelFields, generateMethod, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-mongoose-generator.generators.generateModel">
+            function <span class="apidocSignatureSpan">express-mongoose-generator.generators.</span>generateModel
+            <span class="apidocSignatureSpan">(path, modelName, modelFields, generateMethod, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-mongoose-generator.generators.generateRouter">
+            function <span class="apidocSignatureSpan">express-mongoose-generator.generators.</span>generateRouter
+            <span class="apidocSignatureSpan">(path, modelName, generateMethod, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-mongoose-generator" id="apidoc.module.express-mongoose-generator">module express-mongoose-generator</a></h1>
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-mongoose-generator.fileTools" id="apidoc.module.express-mongoose-generator.fileTools">module express-mongoose-generator.fileTools</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-mongoose-generator.fileTools.createDirIfIsNotDefined" id="apidoc.element.express-mongoose-generator.fileTools.createDirIfIsNotDefined">
+        function <span class="apidocSignatureSpan">express-mongoose-generator.fileTools.</span>createDirIfIsNotDefined
+        <span class="apidocSignatureSpan">(dirPath, dirName, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createDirIfIsNotDefined(dirPath, dirName, cb) {
+    if (!fs.existsSync(dirPath + &#x27;/&#x27; + dirName)){
+        fs.mkdirSync(dirPath + &#x27;/&#x27; + dirName);
+        console.info(cliStyles.cyan + &#x27;\tcreate&#x27; + cliStyles.reset + &#x27;: &#x27; + dirPath + &#x27;/&#x27; + dirName);
+    }
+
+    cb();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var model = ft.loadTemplateSync(&#x27;model.js&#x27;);
+model = model.replace(/{modelName}/, modelName);
+model = model.replace(/{schemaName}/g, schemaName);
+model = model.replace(/{fields}/, fields);
+
+if (generateMethod == &#x27;t&#x27;) {
+    ft.<span class="apidocCodeKeywordSpan">createDirIfIsNotDefined</span>(path, &#x27;models&#x27;, function () {
+        ft.writeFile(path + &#x27;/models/&#x27; + modelName + &#x27;Model.js&#x27;, model, null, cb);
+    });
+} else {
+    ft.createDirIfIsNotDefined(path, modelName, function () {
+        ft.writeFile(path + &#x27;/&#x27; + modelName + &#x27;/&#x27; + modelName + &#x27;Model.js&#x27;, model, null, cb);
+    });
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-mongoose-generator.fileTools.loadTemplateSync" id="apidoc.element.express-mongoose-generator.fileTools.loadTemplateSync">
+        function <span class="apidocSignatureSpan">express-mongoose-generator.fileTools.</span>loadTemplateSync
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function loadTemplateSync(name) {
+    return fs.readFileSync(path.join(__dirname, &#x27;..&#x27;, &#x27;templates&#x27;, name), &#x27;utf-8&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {string} generateMethod
+ * @param {function} cb
+ */
+function generateModel(path, modelName, modelFields, generateMethod, cb) {
+var fields = formatTools.getFieldsForModelTemplate(modelFields);
+var schemaName = modelName + &#x27;Schema&#x27;;
+
+var model = ft.<span class="apidocCodeKeywordSpan">loadTemplateSync</span>(&#x27;model.js&#x27;);
+model = model.replace(/{modelName}/, modelName);
+model = model.replace(/{schemaName}/g, schemaName);
+model = model.replace(/{fields}/, fields);
+
+if (generateMethod == &#x27;t&#x27;) {
+    ft.createDirIfIsNotDefined(path, &#x27;models&#x27;, function () {
+        ft.writeFile(path + &#x27;/models/&#x27; + modelName + &#x27;Model.js&#x27;, model, null, cb);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-mongoose-generator.fileTools.writeFile" id="apidoc.element.express-mongoose-generator.fileTools.writeFile">
+        function <span class="apidocSignatureSpan">express-mongoose-generator.fileTools.</span>writeFile
+        <span class="apidocSignatureSpan">(path, contents, mode, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function writeFile(path, contents, mode, cb) {
+    fs.writeFile(path, contents, {mode: mode || 0666}, function (err) {
+        if (err) { throw err; }
+        console.info(cliStyles.cyan + &#x27;\tcreate&#x27; + cliStyles.reset + &#x27;: &#x27; + path);
+        cb();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Write a file
+ * @param {string} path file path to write
+ * @param {string} contents file contents to write
+ * @param {int} mode write mode
+ * @param {function} cb callback
+ */
+function writeFile(path, contents, mode, cb) {
+    fs.<span class="apidocCodeKeywordSpan">writeFile</span>(path, contents, {mode: mode || 0666}, function (err) {
+        if (err) { throw err; }
+        console.info(cliStyles.cyan + &#x27;\tcreate&#x27; + cliStyles.reset + &#x27;: &#x27; + path);
+        cb();
+    });
+}
+
+/**
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-mongoose-generator.formatTools" id="apidoc.module.express-mongoose-generator.formatTools">module express-mongoose-generator.formatTools</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-mongoose-generator.formatTools.getFieldsForModelTemplate" id="apidoc.element.express-mongoose-generator.formatTools.getFieldsForModelTemplate">
+        function <span class="apidocSignatureSpan">express-mongoose-generator.formatTools.</span>getFieldsForModelTemplate
+        <span class="apidocSignatureSpan">(fields)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getFieldsForModelTemplate(fields) {
+    var lg = fields.length - 1;
+
+    var modelFields = &#x27;{\r&#x27;;
+    fields.forEach(function(field, index, array) {
+        modelFields += &#x27;\t\&#x27;&#x27; + field.name + &#x27;\&#x27; : &#x27; + (allowedFieldsTypes[field.type]).name;
+        modelFields += (lg &#x3e; index) ? &#x27;,\r&#x27; : &#x27;\r&#x27;;
+        if (field.reference) {
+            modelFields = modelFields.replace(/{ref}/, field.reference);
+        }
+    });
+    modelFields += &#x27;}&#x27;;
+
+    return modelFields;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {string} path
+ * @param {string} modelName
+ * @param {array} modelFields
+ * @param {string} generateMethod
+ * @param {function} cb
+ */
+function generateModel(path, modelName, modelFields, generateMethod, cb) {
+var fields = formatTools.<span class="apidocCodeKeywordSpan">getFieldsForModelTemplate</span>(modelFields);
+var schemaName = modelName + &#x27;Schema&#x27;;
+
+var model = ft.loadTemplateSync(&#x27;model.js&#x27;);
+model = model.replace(/{modelName}/, modelName);
+model = model.replace(/{schemaName}/g, schemaName);
+model = model.replace(/{fields}/, fields);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-mongoose-generator.formatTools.pluralize" id="apidoc.element.express-mongoose-generator.formatTools.pluralize">
+        function <span class="apidocSignatureSpan">express-mongoose-generator.formatTools.</span>pluralize
+        <span class="apidocSignatureSpan">(word)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pluralize(word) {
+    return word + &#x27;s&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    createFields += &#x27;\t\t\t&#x27; + field + &#x27; : req.body.&#x27; + field;
+    createFields += ((fields.length - 1) &#x3e; index) ? &#x27;,\r&#x27; : &#x27;\r&#x27;;
+});
+
+controller = controller.replace(/{modelName}/g, modelName + &#x27;Model&#x27;);
+controller = controller.replace(/{name}/g, modelName);
+controller = controller.replace(/{pluralName}/g, formatTools.<span class="apidocCodeKeywordSpan">pluralize</span>(modelName));
+controller = controller.replace(/{controllerName}/g, modelName + &#x27;Controller&#x27;);
+controller = controller.replace(/{createFields}/g, createFields);
+controller = controller.replace(/{updateFields}/g, updateFields);
+
+if (generateMethod == &#x27;t&#x27;) {
+    ft.createDirIfIsNotDefined(path, &#x27;controllers&#x27;, function () {
+        controller = controller.replace(/{modelPath}/g, &#x27;\&#x27;../models/&#x27; + modelName + &#x27;Model.js\&#x27;&#x27;);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-mongoose-generator.generators" id="apidoc.module.express-mongoose-generator.generators">module express-mongoose-generator.generators</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-mongoose-generator.generators.generateController" id="apidoc.element.express-mongoose-generator.generators.generateController">
+        function <span class="apidocSignatureSpan">express-mongoose-generator.generators.</span>generateController
+        <span class="apidocSignatureSpan">(path, modelName, modelFields, generateMethod, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function generateController(path, modelName, modelFields, generateMethod, cb) {
+    var controller = ft.loadTemplateSync(&#x27;controller.js&#x27;);
+
+    var updateFields = &#x27;&#x27;;
+    var createFields = &#x27;\r&#x27;;
+
+    modelFields.forEach(function (f, index, fields) {
+        var field = f.name;
+
+        updateFields += modelName + &#x27;.&#x27; + field + &#x27; = req.body.&#x27; + field + &#x27; ? req.body.&#x27; + field + &#x27; : &#x27; +
+            modelName + &#x27;.&#x27; + field + &#x27;;&#x27;;
+        updateFields += &#x27;\r\t\t\t&#x27;;
+
+        createFields += &#x27;\t\t\t&#x27; + field + &#x27; : req.body.&#x27; + field;
+        createFields += ((fields.length - 1) &#x3e; index) ? &#x27;,\r&#x27; : &#x27;\r&#x27;;
+    });
+
+    controller = controller.replace(/{modelName}/g, modelName + &#x27;Model&#x27;);
+    controller = controller.replace(/{name}/g, modelName);
+    controller = controller.replace(/{pluralName}/g, formatTools.pluralize(modelName));
+    controller = controller.replace(/{controllerName}/g, modelName + &#x27;Controller&#x27;);
+    controller = controller.replace(/{createFields}/g, createFields);
+    controller = controller.replace(/{updateFields}/g, updateFields);
+
+    if (generateMethod == &#x27;t&#x27;) {
+        ft.createDirIfIsNotDefined(path, &#x27;controllers&#x27;, function () {
+            controller = controller.replace(/{modelPath}/g, &#x27;\&#x27;../models/&#x27; + modelName + &#x27;Model.js\&#x27;&#x27;);
+            ft.writeFile(path + &#x27;/controllers/&#x27; + modelName + &#x27;Controller.js&#x27;, controller, null, cb);
+        });
+    } else {
+        ft.createDirIfIsNotDefined(path, modelName, function () {
+            controller = controller.replace(/{modelPath}/g, &#x27;\&#x27;./&#x27; + modelName + &#x27;Model.js\&#x27;&#x27;);
+            ft.writeFile(path + &#x27;/&#x27; + modelName + &#x27;/&#x27; + modelName + &#x27;Controller.js&#x27;, controller, null, cb);
+        });
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-mongoose-generator.generators.generateModel" id="apidoc.element.express-mongoose-generator.generators.generateModel">
+        function <span class="apidocSignatureSpan">express-mongoose-generator.generators.</span>generateModel
+        <span class="apidocSignatureSpan">(path, modelName, modelFields, generateMethod, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function generateModel(path, modelName, modelFields, generateMethod, cb) {
+    var fields = formatTools.getFieldsForModelTemplate(modelFields);
+    var schemaName = modelName + &#x27;Schema&#x27;;
+
+    var model = ft.loadTemplateSync(&#x27;model.js&#x27;);
+    model = model.replace(/{modelName}/, modelName);
+    model = model.replace(/{schemaName}/g, schemaName);
+    model = model.replace(/{fields}/, fields);
+
+    if (generateMethod == &#x27;t&#x27;) {
+        ft.createDirIfIsNotDefined(path, &#x27;models&#x27;, function () {
+            ft.writeFile(path + &#x27;/models/&#x27; + modelName + &#x27;Model.js&#x27;, model, null, cb);
+        });
+    } else {
+        ft.createDirIfIsNotDefined(path, modelName, function () {
+            ft.writeFile(path + &#x27;/&#x27; + modelName + &#x27;/&#x27; + modelName + &#x27;Model.js&#x27;, model, null, cb);
+        });
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-mongoose-generator.generators.generateRouter" id="apidoc.element.express-mongoose-generator.generators.generateRouter">
+        function <span class="apidocSignatureSpan">express-mongoose-generator.generators.</span>generateRouter
+        <span class="apidocSignatureSpan">(path, modelName, generateMethod, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function generateRouter(path, modelName, generateMethod, cb) {
+    var router = ft.loadTemplateSync(&#x27;router.js&#x27;);
+    router = router.replace(/{controllerName}/g, modelName + &#x27;Controller&#x27;);
+
+    if (generateMethod == &#x27;t&#x27;) {
+        ft.createDirIfIsNotDefined(path, &#x27;routes&#x27;, function () {
+            router = router.replace(/{controllerPath}/g, &#x27;\&#x27;../controllers/&#x27; + modelName + &#x27;Controller.js\&#x27;&#x27;);
+            ft.writeFile(path + &#x27;/routes/&#x27; + modelName + &#x27;Routes.js&#x27;, router, null, cb);
+        });
+    } else {
+        ft.createDirIfIsNotDefined(path, modelName, function () {
+            router = router.replace(/{controllerPath}/g, &#x27;\&#x27;./&#x27; + modelName + &#x27;Controller.js\&#x27;&#x27;);
+            ft.writeFile(path + &#x27;/&#x27; + modelName + &#x27;/&#x27; + modelName + &#x27;Routes.js&#x27;, router, null, cb);
+        });
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
