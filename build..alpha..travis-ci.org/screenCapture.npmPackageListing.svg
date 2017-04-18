@@ -1,18 +1,18 @@
 <svg height="238" width="720" xmlns="http://www.w3.org/2000/svg">
 <rect height="238" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">  0.  2017-04-18 16:14:25 +0000    32908 bytes  .</tspan>
-<tspan x="10" y="42">  1.  2017-04-18 16:14:25 +0000     1076 bytes  LICENSE</tspan>
-<tspan x="10" y="58">  2.  2017-04-18 16:14:25 +0000     6246 bytes  README.md</tspan>
-<tspan x="10" y="74">  3.  2017-04-18 16:14:25 +0000    11944 bytes  bin/mongoose-gen</tspan>
-<tspan x="10" y="90">  4.  2017-04-18 16:14:25 +0000      118 bytes  lib/cliStyles.js</tspan>
-<tspan x="10" y="106">  5.  2017-04-18 16:14:25 +0000     1387 bytes  lib/fileTools.js</tspan>
-<tspan x="10" y="122">  6.  2017-04-18 16:14:25 +0000     1089 bytes  lib/formatTools.js</tspan>
-<tspan x="10" y="138">  7.  2017-04-18 16:14:25 +0000     4015 bytes  lib/generators.js</tspan>
-<tspan x="10" y="154">  8.  2017-04-18 16:14:25 +0000     3345 bytes  package.json</tspan>
-<tspan x="10" y="170">  9.  2017-04-18 16:14:25 +0000     2925 bytes  templates/controller.js</tspan>
-<tspan x="10" y="186"> 10.  2017-04-18 16:14:25 +0000      151 bytes  templates/fieldReferenceType.js</tspan>
-<tspan x="10" y="202"> 11.  2017-04-18 16:14:25 +0000      173 bytes  templates/model.js</tspan>
-<tspan x="10" y="218"> 12.  2017-04-18 16:14:25 +0000      439 bytes  templates/router.js</tspan>
+<tspan x="10" y="26">  0.  2017-04-18 16:15:26 +0000    32908 bytes  .</tspan>
+<tspan x="10" y="42">  1.  2017-04-18 16:15:26 +0000     1076 bytes  LICENSE</tspan>
+<tspan x="10" y="58">  2.  2017-04-18 16:15:26 +0000     6246 bytes  README.md</tspan>
+<tspan x="10" y="74">  3.  2017-04-18 16:15:26 +0000    11944 bytes  bin/mongoose-gen</tspan>
+<tspan x="10" y="90">  4.  2017-04-18 16:15:26 +0000      118 bytes  lib/cliStyles.js</tspan>
+<tspan x="10" y="106">  5.  2017-04-18 16:15:26 +0000     1387 bytes  lib/fileTools.js</tspan>
+<tspan x="10" y="122">  6.  2017-04-18 16:15:26 +0000     1089 bytes  lib/formatTools.js</tspan>
+<tspan x="10" y="138">  7.  2017-04-18 16:15:26 +0000     4015 bytes  lib/generators.js</tspan>
+<tspan x="10" y="154">  8.  2017-04-18 16:15:26 +0000     3345 bytes  package.json</tspan>
+<tspan x="10" y="170">  9.  2017-04-18 16:15:26 +0000     2925 bytes  templates/controller.js</tspan>
+<tspan x="10" y="186"> 10.  2017-04-18 16:15:26 +0000      151 bytes  templates/fieldReferenceType.js</tspan>
+<tspan x="10" y="202"> 11.  2017-04-18 16:15:26 +0000      173 bytes  templates/model.js</tspan>
+<tspan x="10" y="218"> 12.  2017-04-18 16:15:26 +0000      439 bytes  templates/router.js</tspan>
 </text>
 </svg>
