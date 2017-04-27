@@ -410,7 +410,24 @@ if (generateMethod == &#x27;t&#x27;) {
         });
     }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            },
+            function (cb) {
+                if (results.rest !== &#x27;yes&#x27;) { return cb(); }
+                generators.generateRouter(path, results.name, results.generateMethod, cb);
+            }            ,
+            function (cb) {
+                if (results.rest !== &#x27;yes&#x27;) { return cb(); }
+                generators.<span class="apidocCodeKeywordSpan">generateController</span>(path, results.name, results.fields, results
+.generateMethod, cb);
+            }
+        ],
+        function (err, results) {
+            closeProgram();
+        }
+    );
+}
+...</pre></li>
     </ul>
 
 
@@ -441,7 +458,24 @@ if (generateMethod == &#x27;t&#x27;) {
         });
     }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        function (err, results) {
+if (err) {
+    return closeProgram();
+}
+
+async.parallel([
+        function (cb) {
+            generators.<span class="apidocCodeKeywordSpan">generateModel</span>(path, results.name, results.fields, results.generateMethod
+, cb);
+        },
+        function (cb) {
+            if (results.rest !== &#x27;yes&#x27;) { return cb(); }
+            generators.generateRouter(path, results.name, results.generateMethod, cb);
+        }            ,
+        function (cb) {
+            if (results.rest !== &#x27;yes&#x27;) { return cb(); }
+...</pre></li>
     </ul>
 
 
@@ -469,7 +503,23 @@ if (generateMethod == &#x27;t&#x27;) {
         });
     }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+            async.parallel([
+    function (cb) {
+        generators.generateModel(path, results.name, results.fields, results.generateMethod, cb);
+    },
+    function (cb) {
+        if (results.rest !== &#x27;yes&#x27;) { return cb(); }
+        generators.<span class="apidocCodeKeywordSpan">generateRouter</span>(path, results.name, results.generateMethod, cb);
+    }            ,
+    function (cb) {
+        if (results.rest !== &#x27;yes&#x27;) { return cb(); }
+        generators.generateController(path, results.name, results.fields, results.generateMethod, cb);
+    }
+],
+function (err, results) {
+...</pre></li>
     </ul>
 
 
