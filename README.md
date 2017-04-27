@@ -1,6 +1,6 @@
 # npmdoc-express-mongoose-generator
 
-#### api documentation for  [express-mongoose-generator (v3.0.2)](https://github.com/DamienP33/express-mongoose-generator#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-express-mongoose-generator.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-express-mongoose-generator) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-express-mongoose-generator.svg)](https://travis-ci.org/npmdoc/node-npmdoc-express-mongoose-generator)
+#### basic api documentation for  [express-mongoose-generator (v3.0.2)](https://github.com/DamienP33/express-mongoose-generator#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-express-mongoose-generator.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-express-mongoose-generator) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-express-mongoose-generator.svg)](https://travis-ci.org/npmdoc/node-npmdoc-express-mongoose-generator)
 
 #### It’s a mongoose model, REST controller and Express router code generator for Express.js 4 application
 
